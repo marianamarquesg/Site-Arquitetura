@@ -1,0 +1,317 @@
+$corclara: #e2c8af;
+$corescura: #c9a181;
+$fonttitle: "Karla", sans-serif;
+$fontbody: "Rubik", sans-serif;
+$paddingtext: 0 30px 0  30px;
+$paddingh1: 70px 0 20px 0;
+$paddingh2: 70px 0 20px 0;
+$corfont:#696969;
+
+@mixin text {
+  color: black;
+  text-align: center;
+  line-height: 23px;
+}
+
+@mixin button {
+  border-radius: 25px;
+  margin: 40px 0 70px 0;
+  border: transparent;
+  padding: 15px 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+body {
+  background-color: #f3ede7;
+  font-family: $fontbody;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: $fonttitle;
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: $paddingh1;
+}
+
+h2 {
+  font-family: $fontbody;
+  padding: $paddingh2;
+  letter-spacing: 1px;
+  color: $corfont;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+}
+.btn-menu {
+  background-color: transparent;
+  border: none;
+  margin-right: 5px;
+  color: white;
+  padding: 10px;
+}
+
+.btn-menu-close {
+  padding: 10px;
+  position: relative;
+  top: -15px;
+  right: -170px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.menu {
+  background-color: $corescura;
+  position: fixed;
+  height: 100%;
+  transform: translateX(250px);
+  transition: transform 290ms ease;
+}
+
+.menu-open {
+  transform: translateX(0px);
+}
+
+ul li {
+  border-bottom: 1px solid #f0d3bb;
+  padding: 20px;
+  width: 200px;
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.cards {
+   display: flex;
+  width: 100%;
+   height: 100%;
+}
+.cards-item {
+  width: 40%;
+
+  .cards-texts {
+    @include text;
+    color: white;
+    button {
+      @include button();
+    }
+  }
+}
+.card1 {
+  background-color: $corescura;
+  padding: $paddingtext;
+  p{
+    padding: $paddingtext;
+  }
+  button {
+    background-color: $corclara;
+    &:hover {
+      background-color: #b18a70;
+    }
+  }
+}
+.card2 {
+  background-color: $corclara;
+  padding: $paddingtext;
+  p{
+    padding: $paddingtext;
+  }
+  button {
+    background-color: $corescura;
+    &:hover {
+      background-color: #b18a70;
+    }
+  }
+}
+
+.cover-img {
+  background-image: url(imagens/img1.jpg);
+  width: 60%;
+   background-size: cover;
+  background-position: center;
+}
+
+.ambients {
+  background-color: #fff;
+  h1 {
+    color:$corfont;
+  }
+  p {
+    @include text();
+    color:$corfont;
+    width: 60%;
+    margin: 0 auto;
+    padding: $paddingtext;
+    padding-bottom: 70px;
+  }
+}
+
+.carousel {
+  background-color: #e2c8af;
+  padding: 60px 0 60px 0;
+  display: flex;
+  .carousel-item {
+    margin: 0 auto;
+    width: 60%;
+    color:$corfont;
+  }
+  .carousel-img {
+    background-size: cover;
+    height: 350px;
+  }
+  .carousel-text {
+    @include text();
+    padding: $paddingtext;
+    padding-bottom: 70px;
+    background-color: white;
+    color: $corfont;
+  }
+  .btn-arrow {
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin: 0 auto;
+  }
+}
+
+.img-1 {
+  background-image: url(imagens/img2.jpg);
+}
+.img-2 {
+  background-image: url(imagens/img3.jpg);
+}
+.img-3 {
+  background-image: url(imagens/img4.jpg);
+}
+
+.none {
+  display: none;
+}
+
+.team {
+  background-color: #fff;
+  padding-bottom: 70px;
+  
+  .title {
+     @include text();
+    padding: $paddingtext;
+    padding-bottom: 70px;
+    color: $corfont;
+  }
+  .team-container {
+    background-color: white;
+    box-shadow: 0 0 1em rgb(173, 173, 173);
+    width: 80%;
+    min-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.team-content-1 {
+    min-width: 320px;
+  display: flex;
+
+  .team-text1 {   
+    text-align: center;
+    width: 600px;
+    p{
+        padding: $paddingtext;
+    }
+  }
+  .team-img1 {
+    background-image: url(imagens/people2.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  button {
+    @include button();
+    background-color: #b18a70;
+    &:hover {
+      background-color: $corclara;
+    }
+  }
+}
+
+.team-content-2 {
+ min-width: 320px;
+  display: flex;
+  flex-direction: row-reverse;
+  .team-img2 {
+    background-image: url(imagens/people1.jpg);
+    background-repeat: no-repeat;
+    width: 600px;
+    background-size: cover;
+    background-position: center;
+  }
+  .team-text2 {
+        text-align: center;
+        width: 100%;
+        p{    
+         padding: $paddingtext;
+        }
+  }
+  button {
+    @include button();
+    background-color: #b18a70;
+    &:hover {
+      background-color: $corclara;
+    }
+  }
+}
+
+.form {
+  background-color: $corescura;
+  margin-bottom: 90px;
+  @include text();
+  color: white;
+  .form-item1 {
+    margin: 40px -7px 40px 0;
+    width: 40%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+
+    &:focus {
+      box-shadow: 0 10px 1em $corclara;
+    }
+  }
+  .form-item2 {
+    width: 110px;
+    margin-left: 0;
+    padding: 15px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    color: white;
+    background-color: #b18a70;
+    text-transform: uppercase;
+    font-size: 12px;
+    &:hover {
+      background-color: $corclara;
+    }
+  }
+}
