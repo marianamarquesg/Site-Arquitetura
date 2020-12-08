@@ -22,77 +22,34 @@ h2 {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
-.navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  height: 100%;
-}
-
 .btn-menu {
-  background-color: transparent;
-  border: none;
-  margin-right: 5px;
-  color: white;
-  padding: 10px;
+  display: none;
 }
 
 .btn-menu-close {
-  padding: 10px;
-  position: relative;
-  top: -15px;
-  right: -170px;
-  background-color: transparent;
-  border: none;
-  color: white;
-}
-
-.btn-menu-close:hover {
-  opacity: 0.5;
+  display: none;
 }
 
 .menu {
-  background-color: #c9a181;
-  position: fixed;
-  height: 100%;
-  -webkit-transform: translateX(250px);
-          transform: translateX(250px);
-  -webkit-transition: -webkit-transform 290ms ease;
-  transition: -webkit-transform 290ms ease;
-  transition: transform 290ms ease;
-  transition: transform 290ms ease, -webkit-transform 290ms ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.menu-open {
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-}
-
-ul li {
-  border-bottom: 1px solid #f0d3bb;
-  padding: 20px;
-  width: 200px;
-}
-
-ul li a {
+.menu a {
   text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-ul li a:hover {
-  opacity: 0.5;
+  margin: 10px;
+  display: inline-block;
+  padding: 15px;
+  color: #3c485e;
+  font-weight: bold;
 }
 
 .cards {
@@ -108,25 +65,23 @@ ul li a:hover {
 }
 
 .cards-item .cards-texts {
-  color: black;
   text-align: center;
-  line-height: 23px;
-  color: white;
+  line-height: 30px;
 }
 
 .cards-item .cards-texts button {
   border-radius: 25px;
   margin: 40px 0 70px 0;
   border: transparent;
-  padding: 15px 30px;
-  color: #fff;
+  padding: 15px 40px;
   text-transform: uppercase;
   font-size: 11px;
 }
 
 .card1 {
-  background-color: #c9a181;
+  background-color: #3c485e;
   padding: 0 30px 0 30px;
+  color: #e2c8af;
 }
 
 .card1 p {
@@ -134,16 +89,18 @@ ul li a:hover {
 }
 
 .card1 button {
-  background-color: #e2c8af;
+  background-color: #636b79;
+  color: #e2c8af;
 }
 
 .card1 button:hover {
-  background-color: #b18a70;
+  background-color: #6c7380;
 }
 
 .card2 {
   background-color: #e2c8af;
   padding: 0 30px 0 30px;
+  color: #3c485e;
 }
 
 .card2 p {
@@ -151,11 +108,12 @@ ul li a:hover {
 }
 
 .card2 button {
-  background-color: #c9a181;
+  background-color: #b18a70;
+  color: #e2c8af;
 }
 
 .card2 button:hover {
-  background-color: #b18a70;
+  background-color: #b89882;
 }
 
 .cover-img {
@@ -174,9 +132,8 @@ ul li a:hover {
 }
 
 .ambients p {
-  color: black;
   text-align: center;
-  line-height: 23px;
+  line-height: 30px;
   color: #696969;
   width: 60%;
   margin: 0 auto;
@@ -204,9 +161,8 @@ ul li a:hover {
 }
 
 .carousel .carousel-text {
-  color: black;
   text-align: center;
-  line-height: 23px;
+  line-height: 30px;
   padding: 0 30px 0 30px;
   padding-bottom: 70px;
   background-color: white;
@@ -216,7 +172,7 @@ ul li a:hover {
 .carousel .btn-arrow {
   background-color: transparent;
   border: none;
-  color: white;
+  color: #b18a70;
   margin: 0 auto;
 }
 
@@ -242,9 +198,8 @@ ul li a:hover {
 }
 
 .team .title {
-  color: black;
   text-align: center;
-  line-height: 23px;
+  line-height: 30px;
   padding: 0 30px 0 30px;
   padding-bottom: 70px;
   color: #696969;
@@ -254,25 +209,25 @@ ul li a:hover {
   background-color: white;
   -webkit-box-shadow: 0 0 1em #adadad;
           box-shadow: 0 0 1em #adadad;
-  width: 80%;
-  min-width: 700px;
+  width: 90%;
   margin: 0 auto;
 }
 
 .team-content-1 {
-  min-width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .team-content-1 .team-text1 {
+  color: #696969;
   text-align: center;
-  width: 600px;
+  width: 60%;
 }
 
 .team-content-1 .team-text1 p {
   padding: 0 30px 0 30px;
+  line-height: 30px;
 }
 
 .team-content-1 .team-img1 {
@@ -287,19 +242,18 @@ ul li a:hover {
   border-radius: 25px;
   margin: 40px 0 70px 0;
   border: transparent;
-  padding: 15px 30px;
-  color: #fff;
+  padding: 15px 40px;
   text-transform: uppercase;
   font-size: 11px;
-  background-color: #b18a70;
+  background-color: #3c485e;
+  color: #e2c8af;
 }
 
 .team-content-1 button:hover {
-  background-color: #e2c8af;
+  background-color: #6c7380;
 }
 
 .team-content-2 {
-  min-width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -312,42 +266,44 @@ ul li a:hover {
 .team-content-2 .team-img2 {
   background-image: url(imagens/people1.jpg);
   background-repeat: no-repeat;
-  width: 600px;
+  width: 60%;
   background-size: cover;
   background-position: center;
 }
 
 .team-content-2 .team-text2 {
+  color: #696969;
   text-align: center;
   width: 100%;
 }
 
 .team-content-2 .team-text2 p {
   padding: 0 30px 0 30px;
+  line-height: 30px;
 }
 
 .team-content-2 button {
   border-radius: 25px;
   margin: 40px 0 70px 0;
   border: transparent;
-  padding: 15px 30px;
-  color: #fff;
+  padding: 15px 40px;
   text-transform: uppercase;
   font-size: 11px;
-  background-color: #b18a70;
+  background-color: #3c485e;
+  color: #e2c8af;
 }
 
 .team-content-2 button:hover {
-  background-color: #e2c8af;
+  background-color: #6c7380;
 }
 
 .form {
-  background-color: #c9a181;
+  background-color: #3c485e;
   margin-bottom: 90px;
-  color: black;
+  padding-bottom: 40px;
   text-align: center;
-  line-height: 23px;
-  color: white;
+  line-height: 30px;
+  color: #e2c8af;
 }
 
 .form .form-item1 {
@@ -377,6 +333,49 @@ ul li a:hover {
 }
 
 .form .form-item2:hover {
-  background-color: #e2c8af;
+  background-color: #b89882;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: #f09a9d;
+    /* Red */
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 501px) and (max-width: 960px) {
+  body {
+    background-color: #f5cf8e;
+    /* Yellow */
+  }
+  .team-content-1 {
+    width: 100%;
+    display: block;
+  }
+  .team-content-2 {
+    width: 100%;
+    display: block;
+  }
+  .team-img1 {
+    width: 100%;
+  }
+  .team-img2 {
+    width: 100%;
+  }
+  .team-text1 {
+    width: 100%;
+  }
+  .team-text2 {
+    width: 100%;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: #b2d6ff;
+    /* Blue */
+  }
 }
 /*# sourceMappingURL=estilo.css.map */

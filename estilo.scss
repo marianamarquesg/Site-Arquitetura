@@ -1,24 +1,26 @@
 $corclara: #e2c8af;
-$corescura: #c9a181;
+$corescura: #3c485e;
 $fonttitle: "Karla", sans-serif;
 $fontbody: "Rubik", sans-serif;
-$paddingtext: 0 30px 0  30px;
+$paddingtext: 0 30px 0 30px;
 $paddingh1: 70px 0 20px 0;
 $paddingh2: 70px 0 20px 0;
-$corfont:#696969;
+$corfont: #696969;
+$hoverclaro: #b89882;
+$hoverescuro: #6c7380;
+$buttonescuro: #636b79;
+$buttonclaro: #b18a70;
 
 @mixin text {
-  color: black;
   text-align: center;
-  line-height: 23px;
+  line-height: 30px;
 }
 
 @mixin button {
   border-radius: 25px;
   margin: 40px 0 70px 0;
   border: transparent;
-  padding: 15px 30px;
-  color: #fff;
+  padding: 15px 40px;
   text-transform: uppercase;
   font-size: 11px;
 }
@@ -46,74 +48,40 @@ h2 {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 
-.navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  height: 100%;
-}
 .btn-menu {
-  background-color: transparent;
-  border: none;
-  margin-right: 5px;
-  color: white;
-  padding: 10px;
+  display: none;
 }
-
 .btn-menu-close {
-  padding: 10px;
-  position: relative;
-  top: -15px;
-  right: -170px;
-  background-color: transparent;
-  border: none;
-  color: white;
-  &:hover {
-    opacity: 0.5;
-  }
+  display: none;
 }
 
 .menu {
-  background-color: $corescura;
-  position: fixed;
-  height: 100%;
-  transform: translateX(250px);
-  transition: transform 290ms ease;
-}
-
-.menu-open {
-  transform: translateX(0px);
-}
-
-ul li {
-  border-bottom: 1px solid #f0d3bb;
-  padding: 20px;
-  width: 200px;
+  display: flex;
+  justify-content: flex-end;
   a {
     text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    &:hover {
-      opacity: 0.5;
-    }
+    margin: 10px;
+    display: inline-block;
+    padding: 15px;
+    color: $corescura;
+    font-weight: bold;
   }
 }
 
 .cards {
-   display: flex;
+  display: flex;
   width: 100%;
-   height: 100%;
+  height: 100%;
 }
 .cards-item {
   width: 40%;
 
   .cards-texts {
     @include text;
-    color: white;
     button {
       @include button();
     }
@@ -122,26 +90,30 @@ ul li {
 .card1 {
   background-color: $corescura;
   padding: $paddingtext;
-  p{
+  color: $corclara;
+  p {
     padding: $paddingtext;
   }
   button {
-    background-color: $corclara;
+    background-color: $buttonescuro;
+    color: $corclara;
     &:hover {
-      background-color: #b18a70;
+      background-color: $hoverescuro;
     }
   }
 }
 .card2 {
   background-color: $corclara;
   padding: $paddingtext;
-  p{
+  color: $corescura;
+  p {
     padding: $paddingtext;
   }
   button {
-    background-color: $corescura;
+    background-color: $buttonclaro;
+    color: $corclara;
     &:hover {
-      background-color: #b18a70;
+      background-color: $hoverclaro;
     }
   }
 }
@@ -149,18 +121,18 @@ ul li {
 .cover-img {
   background-image: url(imagens/img1.jpg);
   width: 60%;
-   background-size: cover;
+  background-size: cover;
   background-position: center;
 }
 
 .ambients {
   background-color: #fff;
   h1 {
-    color:$corfont;
+    color: $corfont;
   }
   p {
     @include text();
-    color:$corfont;
+    color: $corfont;
     width: 60%;
     margin: 0 auto;
     padding: $paddingtext;
@@ -175,7 +147,7 @@ ul li {
   .carousel-item {
     margin: 0 auto;
     width: 60%;
-    color:$corfont;
+    color: $corfont;
   }
   .carousel-img {
     background-size: cover;
@@ -191,7 +163,7 @@ ul li {
   .btn-arrow {
     background-color: transparent;
     border: none;
-    color: white;
+    color: $buttonclaro;
     margin: 0 auto;
   }
 }
@@ -213,9 +185,9 @@ ul li {
 .team {
   background-color: #fff;
   padding-bottom: 70px;
-  
+
   .title {
-     @include text();
+    @include text();
     padding: $paddingtext;
     padding-bottom: 70px;
     color: $corfont;
@@ -223,21 +195,21 @@ ul li {
   .team-container {
     background-color: white;
     box-shadow: 0 0 1em rgb(173, 173, 173);
-    width: 80%;
-    min-width: 700px;
+    width: 90%;
     margin: 0 auto;
   }
 }
 
 .team-content-1 {
-    min-width: 320px;
   display: flex;
 
-  .team-text1 {   
+  .team-text1 {
+    color: $corfont;
     text-align: center;
-    width: 600px;
-    p{
-        padding: $paddingtext;
+    width: 60%;
+    p {
+      padding: $paddingtext;
+      line-height: 30px;
     }
   }
   .team-img1 {
@@ -249,36 +221,39 @@ ul li {
   }
   button {
     @include button();
-    background-color: #b18a70;
+    background-color: $corescura;
+    color: $corclara;
     &:hover {
-      background-color: $corclara;
+      background-color: $hoverescuro;
     }
   }
 }
 
 .team-content-2 {
- min-width: 320px;
   display: flex;
   flex-direction: row-reverse;
   .team-img2 {
     background-image: url(imagens/people1.jpg);
     background-repeat: no-repeat;
-    width: 600px;
+    width: 60%;
     background-size: cover;
     background-position: center;
   }
   .team-text2 {
-        text-align: center;
-        width: 100%;
-        p{    
-         padding: $paddingtext;
-        }
+    color: $corfont;
+    text-align: center;
+    width: 100%;
+    p {
+      padding: $paddingtext;
+      line-height: 30px;
+    }
   }
   button {
     @include button();
-    background-color: #b18a70;
+    background-color: $corescura;
+    color: $corclara;
     &:hover {
-      background-color: $corclara;
+      background-color: $hoverescuro;
     }
   }
 }
@@ -286,8 +261,10 @@ ul li {
 .form {
   background-color: $corescura;
   margin-bottom: 90px;
+  padding-bottom: 40px;
   @include text();
-  color: white;
+  color: $corclara;
+
   .form-item1 {
     margin: 40px -7px 40px 0;
     width: 40%;
@@ -307,11 +284,106 @@ ul li {
     border: none;
     border-radius: 0 25px 25px 0;
     color: white;
-    background-color: #b18a70;
+    background-color: $buttonclaro;
     text-transform: uppercase;
     font-size: 12px;
     &:hover {
-      background-color: $corclara;
+      background-color: $hoverclaro;
     }
+  }
+}
+
+// @media (max-width: 768px) {
+//   .navbar {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     height: 100%;
+//   }
+//   .btn-menu {
+//     background-color: transparent;
+//     border: none;
+//     margin-right: 5px;
+//     color: $corfont;
+//     padding: 10px;
+//   }
+
+//   .btn-menu-close {
+//     padding: 10px;
+//     position: relative;
+//     top: -15px;
+//     right: -170px;
+//     background-color: transparent;
+//     border: none;
+//     color: white;
+//     &:hover {
+//       opacity: 0.5;
+//     }
+//   }
+
+//   .menu {
+//     background-color: $corescura;
+//     position: fixed;
+//     height: 100%;
+//     transform: translateX(250px);
+//     transition: transform 290ms ease;
+//   }
+
+//   .menu-open {
+//     transform: translateX(0px);
+//   }
+//   ul li {
+//     border-bottom: 1px solid #f0d3bb;
+//     padding: 20px;
+//     width: 200px;
+//     a {
+//       text-decoration: none;
+//       color: $corfont;
+//       text-transform: uppercase;
+//       &:hover {
+//         opacity: 0.5;
+//       }
+//     }
+//   }
+// }
+
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: #f09a9d; /* Red */
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 501px) and (max-width: 960px) {
+  body {
+    background-color: #f5cf8e; /* Yellow */
+  }
+
+  .team-content-1 {
+    width: 100%;
+    display: block;
+  }
+  .team-content-2 {
+    width: 100%;
+    display: block;
+  }
+  .team-img1 {
+    width: 100%;
+  }
+  .team-img2 {
+    width: 100%;
+  }
+  .team-text1 {
+    width: 100%;
+  }
+  .team-text2 {
+    width: 100%;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: #b2d6ff; /* Blue */
   }
 }
