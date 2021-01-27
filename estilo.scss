@@ -202,6 +202,7 @@ h2 {
 
 .team-content-1 {
   display: flex;
+  height: 100%;
 
   .team-text1 {
     color: $corfont;
@@ -243,6 +244,7 @@ h2 {
     color: $corfont;
     text-align: center;
     width: 100%;
+
     p {
       padding: $paddingtext;
       line-height: 30px;
@@ -278,9 +280,7 @@ h2 {
   }
   .form-item2 {
     width: 110px;
-    margin-left: 0;
-    padding: 15px;
-    padding-left: 20px;
+    padding: 15px 15px 13px 15px;
     border: none;
     border-radius: 0 25px 25px 0;
     color: white;
@@ -293,97 +293,151 @@ h2 {
   }
 }
 
-// @media (max-width: 768px) {
-//   .navbar {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-end;
-//     height: 100%;
-//   }
-//   .btn-menu {
-//     background-color: transparent;
-//     border: none;
-//     margin-right: 5px;
-//     color: $corfont;
-//     padding: 10px;
-//   }
-
-//   .btn-menu-close {
-//     padding: 10px;
-//     position: relative;
-//     top: -15px;
-//     right: -170px;
-//     background-color: transparent;
-//     border: none;
-//     color: white;
-//     &:hover {
-//       opacity: 0.5;
-//     }
-//   }
-
-//   .menu {
-//     background-color: $corescura;
-//     position: fixed;
-//     height: 100%;
-//     transform: translateX(250px);
-//     transition: transform 290ms ease;
-//   }
-
-//   .menu-open {
-//     transform: translateX(0px);
-//   }
-//   ul li {
-//     border-bottom: 1px solid #f0d3bb;
-//     padding: 20px;
-//     width: 200px;
-//     a {
-//       text-decoration: none;
-//       color: $corfont;
-//       text-transform: uppercase;
-//       &:hover {
-//         opacity: 0.5;
-//       }
-//     }
-//   }
-// }
 
 @media only screen and (max-width: 500px) {
-  body {
-    background-color: #f09a9d; /* Red */
+  .btn-menu {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    color: $corclara;
+    padding: 10px;
   }
+
+  .button-nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .menu {
+    display: none;
+  }
+
+  .menu-open {
+    height: calc(100vh - 52px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $corclara;
+    transition: transform 290ms ease;
+  }
+
+  .menu-item {
+    border-bottom: 1px solid #f0d3bb;
+    a {
+      padding: 10px;
+      text-decoration: none;
+      color: $corfont;
+      text-transform: uppercase;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.cover-img {
+  display: none;
+}
+.cards-item {
+  width: 100%;
+}
+
+.ambients p {
+  width: 80%;
+}
+
+.carousel .carousel-item {
+  width: 100%;
+}
+.carousel {
+  padding: 0px 0px 1px 0px;
+  position: relative;
+}
+.btn-arrow {
+  position: absolute;
+  top: 500px;
+}
+.carousel .carousel-text {
+  padding: 0 60px 70px 60px;
+}
+.arrow-right {
+  right: 5px;
+}
+.arrow-left {
+  left: 5px;
+}
+
+.team-content-1,
+.team-content-2 {
+  display: flex;
+  flex-direction: column;
+}
+.team-img1 {
+  height: 250px;
+  width: 400px;
+}
+.team-content-1 .team-text1 {
+  height: 100%;
+  width: 100%;
+}
+
+.team-content-2 .team-img2 {
+  height: 250px;
+  width: 100%;
+}
+.team-content-2 {
+  height: 100%;
+  width: 100%;
+}
+
+.form {
+  margin-bottom: 0px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.form .form-item1 {
+  width: 90%;
+  border-radius: 25px 25px;
+  margin: 20px auto;
+}
+.form .form-item2 {
+  width: 40%;
+  border-radius: 25px 25px;
+  margin: 0 auto;
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 501px) and (max-width: 960px) {
-  body {
-    background-color: #f5cf8e; /* Yellow */
+  .team-content-1 {
+    flex-direction: column;
   }
 
-  .team-content-1 {
+  .team-content-1 .team-text1 {
     width: 100%;
-    display: block;
   }
-  .team-content-2 {
-    width: 100%;
-    display: block;
-  }
+
   .team-img1 {
+    height: 300px;
+  }
+
+  .team-content-2 {
+    flex-direction: column;
+  }
+  .team-content-2 .team-img2 {
     width: 100%;
+    height: 300px;
   }
   .team-img2 {
-    width: 100%;
-  }
-  .team-text1 {
-    width: 100%;
-  }
-  .team-text2 {
-    width: 100%;
+    height: 300px;
   }
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
   body {
-    background-color: #b2d6ff; /* Blue */
+    // background-color: #b2d6ff; /* Blue */
   }
 }
